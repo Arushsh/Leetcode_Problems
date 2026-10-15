@@ -1,9 +1,10 @@
 class Solution:
     def transformArray(self, nums: List[int]) -> List[int]:
+        countEven=0
+        countOdd=0
         for i in range(len(nums)):
             if nums[i]%2==0:
-                nums[i]=0
+                countEven+=1
             else:
-                nums[i]=1
-        nums.sort()
-        return nums
+                countOdd+=1
+        return [0] * countEven + [1] * countOdd
